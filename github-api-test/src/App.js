@@ -18,18 +18,25 @@ function App() {
     fetch('https://api.github.com/users/flborrelli')
     .then(responseFromAPI => responseFromAPI.json())
     .then(data => {
-      console.log(data)
+      setData(data)
     })
   } , [])
 
-
+  const setData = ({ name, login, public_repos, avatar_url, bio, location }) => {
+    setName(name);
+    setUsername(login);
+    setAvatar(avatar_url);
+    setRepositories(public_repos);
+    setBio(bio);
+    setLocation(location);
+  }
 
   return (
     <>
       <MyNavbar/>
       <div className='d-flex flex-column align-items-center mt-5'>
         <div>
-        <SearchForm/>
+          <SearchForm/>
         </div>
         <UserCard/>
       </div>
