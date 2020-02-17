@@ -14,6 +14,16 @@ function App() {
   const [bio, setBio] = useState('');
   const [location, setLocation] = useState('');
 
+  useEffect( () => {
+    fetch('https://api.github.com/users/flborrelli')
+    .then(responseFromAPI => responseFromAPI.json())
+    .then(data => {
+      console.log(data)
+    })
+  } , [])
+
+
+
   return (
     <>
       <MyNavbar/>
