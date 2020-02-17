@@ -1,24 +1,25 @@
 import React from 'react';
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Icon, Image } from 'semantic-ui-react';
 
 
-function UserCard (){
+function UserCard (props){
+  console.log(props.getName)
   return(
     <Card>
-    <Image src='/images/matthew.png' wrapped ui={false} />
+    <Image src={props.getAvatar} wrapped ui={false} />
     <Card.Content>
-      <Card.Header>Matthew</Card.Header>
+      <Card.Header>{props.getName}</Card.Header>
       <Card.Meta>
-        <span className='date'>Joined in 2015</span>
+        <span className='date'>{props.getLocation}</span>
       </Card.Meta>
       <Card.Description>
-        Matthew is a musician living in Nashville.
+        {props.getBio}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <a>
         <Icon name='code branch' />
-        22 Repos
+        {props.getRepositories} public repositories
       </a>
     </Card.Content>
   </Card>

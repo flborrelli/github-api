@@ -1,10 +1,13 @@
 import React from 'react';
-import { Input } from 'semantic-ui-react'
+import { Form, Input, Button } from 'semantic-ui-react'
 
 
-function SearchForm (){
+function SearchForm (props){
   return(
-    <Input icon='users' iconPosition='left' placeholder='Search users...' />
+    <Form onSubmit={props.getSubmit}>
+    <Input onChange={props.getUserInput} icon='users' iconPosition='left' placeholder='Search users...' className='mr-2'/>
+    <Button icon='search' type='submit'></Button>
+    </Form>
   )
 }
 
