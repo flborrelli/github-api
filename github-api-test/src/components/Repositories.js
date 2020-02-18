@@ -1,31 +1,58 @@
-import React from 'react';
-import { Button, Icon, Card } from 'semantic-ui-react'
+import React from "react";
+import { Button, Icon, Card } from "semantic-ui-react";
 
-
-function Repositories (props){
-  console.log(props.getReposArr)
-  return(
+function Repositories(props) {
+  console.log(props.getReposArr);
+  return (
     <>
-    <Button onClick={props.reposButton} type='button'>Show Repos</Button>
-    {
-      props.getReposArr.length ? 
-      props.getReposArr.map(repo => {
-        return <Card.Group>
-        <Card>
-        <Card.Content>
-        <Card.Header>{repo.name}</Card.Header>
-        <Card.Meta><Icon name='star' className='star'/> {repo.stargazers_count} stars</Card.Meta>
-        <Card.Description>
-        </Card.Description>
-      </Card.Content>
-    </Card>
-    </Card.Group>
-      })
-      :
-      <div>No repos</div>
-    }
+      <div className='d-flex justify-content-center'>
+      {
+        props.reposFlag ? <div>
+        <Icon name='angle double down' className='arrow-down'/>
+        <Button onClick={props.reposButton} type="button" className="mb-3" color='blue'>
+        Hide Repos
+      </Button>
+      <Icon name='angle double down' className='arrow-down'/>
+        </div> :
+      <Button onClick={props.reposButton} type="button" className="mb-3" color='blue'>
+        Show Repos
+      </Button>
+      }
+      
+      </div>
+      <div className="container">
+        <div className="row">
+      {props.reposFlag ? (
+        props.getReposArr.length ? (
+          props.getReposArr.map(repo => {
+            return (
+              <div className='repos-container col-sm-4'>
+              <Card.Group className='my-3'>
+                <Card>
+                  <Card.Content>
+                    <Card.Header><Icon name='code'/>{repo.name}</Card.Header>
+                    <Card.Meta className='mt-3'>
+                      <Icon name="star" className="star" />{" "}
+                      {repo.stargazers_count} stars
+                    </Card.Meta>
+                    <Card.Description></Card.Description>
+                  </Card.Content>
+                </Card>
+              </Card.Group>
+              </div>
+            );
+          })
+        ) : (
+          <div>{props.getName} has no repos yet.</div>
+        )
+      ) : (
+        <div></div>
+      )}
+
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
 export default Repositories;

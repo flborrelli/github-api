@@ -20,3 +20,19 @@ img {
 .star {
   color: rgb(190, 190, 51);
 }
+
+.repos {
+  /* border: solid red; */
+  width: 100vw;
+  /* display:flex; */
+  /* justify-content: center; */
+}
+
+.repos-container {
+  /* border: solid; */
+  width: 100%;
+}
+
+.arrow-down {
+  color: steelblue;
+}
