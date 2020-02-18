@@ -26,7 +26,7 @@ function Repositories(props) {
           props.getReposArr.map(repo => {
             return (
               <div className='repos-container col-sm-4' key={repo.id}>
-              <Card.Group className='my-3'>
+              <Card.Group className='my-3 justify-content-center'>
                 <Card>
                   <Card.Content>
                     <Card.Header><Icon name='code'/>{repo.name}</Card.Header>

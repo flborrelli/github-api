@@ -14,7 +14,7 @@ function MyNavbar (){
         alt="octocat"
       />
     </Navbar.Brand>
-    <h2>GitHub API Fetch</h2>
+    <h2 className='navbar-title'>GitHub API Fetch</h2>
   </Navbar>
   )
 }
