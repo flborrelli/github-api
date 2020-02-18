@@ -1,5 +1,5 @@
 # GitHub API Test
-This is a GitHub API fetch application developed with React aiming at search GitHub user's, their repos and repos' stars.
+This is a GitHub API Fetch application developed with React aiming at search GitHub user's, their repos and repos' stars.
 
 ![](/github-api-test/public/images/app-screenshot.png)
 
@@ -17,11 +17,11 @@ $ npm install
 $ npm start
 ```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Runs the app in the development mode.<br />  <br />
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- The page will reload if you make edits.<br /> <br />
+- You will also see any lint errors in the console.
 
 
 ## Technologies
