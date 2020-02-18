@@ -1,7 +1,7 @@
 # GitHub API Test
 This is a GitHub API fetch application developed with React aiming at search GitHub user's, their repos and repos' stars.
 
-![](/public/images/app-screenshot.png)
+![](/github-api-test/public/images/app-screenshot.png)
 
 ## Usage
 
