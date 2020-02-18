@@ -11,7 +11,7 @@ function App() {
   const [avatar, setAvatar] = useState("");
   const [repositories, setRepositories] = useState([]);
   const [reposURL, setReposURL] = useState(
-    "https://api.github.com/users/example/repos"
+    ""
   );
   const [numberOfRepositories, setNumberOfRepositories] = useState("");
   const [bio, setBio] = useState("");
@@ -54,7 +54,7 @@ function App() {
         setLoader(false);
       })
       .catch(err => {
-        throw new err();
+        window.alert('There is a error while fetching GitHub API:', err)
       });
   };
 
@@ -62,7 +62,6 @@ function App() {
     getDataFromAPI();
   }, []);
 
-  //Search and Submit functions
   const handleSearch = event => {
     setUserInput(event.target.value);
   };
@@ -82,11 +81,10 @@ function App() {
         }
       })
       .catch(err => {
-        console.log("There is an Error while submiting");
+        console.log('There is an Error while submiting:', err)
       });
   };
 
-  //Get Repositories from API
   const getReposFromAPI = () => {
     fetch(reposAPI_URL)
       .then(responseFromAPI => responseFromAPI.json())
@@ -94,7 +92,7 @@ function App() {
         setRepositories(repos);
       })
       .catch(err => {
-        console.log("There is an Error getting Repos");
+        console.log("There is an Error getting Repos:", err);
       });
   };
 

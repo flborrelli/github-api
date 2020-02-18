@@ -4,7 +4,6 @@ import Repositories from './Repositories';
 
 
 function UserCard (props){
-  console.log(props.getName)
   return(
     <div className='d-flex flex-column align-items-center mt-3'>
     {props.getError ? <h1><Icon name='dont'/> User {props.getError.toLowerCase()}, please insert a valid user.</h1> :
