@@ -1,5 +1,7 @@
 # GitHub API Test
-This is a GitHub API Fetch application developed with React aiming at search GitHub user's, their repos and repos' stars.
+This is a responsive **GitHub API Fetch** application developed with React aiming at search GitHub users, their repos and its stars.
+
+#### API Documentation: https://developer.github.com/v3/
 
 ![](/github-api-test/public/images/app-screenshot.png)
 
