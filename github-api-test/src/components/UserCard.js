@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button, Card, Icon, Image } from 'semantic-ui-react';
+import React, { memo } from 'react';
+import { Card, Icon, Image } from 'semantic-ui-react';
 import Repositories from './Repositories';
 
 
@@ -39,4 +39,4 @@ function UserCard (props){
   )
 }
 
-export default UserCard;
+export default memo(UserCard);

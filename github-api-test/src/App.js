@@ -94,7 +94,7 @@ function App() {
         setRepositories(repos);
       })
       .catch(err => {
-        console.log("There is an Error while submiting");
+        console.log("There is an Error getting Repos");
       });
   };
 

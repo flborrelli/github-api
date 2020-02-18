@@ -1,8 +1,7 @@
-import React from "react";
+import React, { memo } from 'react';
 import { Button, Icon, Card } from "semantic-ui-react";
 
 function Repositories(props) {
-  console.log(props.getReposArr);
   return (
     <>
       <div className='d-flex justify-content-center'>
@@ -26,7 +25,7 @@ function Repositories(props) {
         props.getReposArr.length ? (
           props.getReposArr.map(repo => {
             return (
-              <div className='repos-container col-sm-4'>
+              <div className='repos-container col-sm-4' key={repo.id}>
               <Card.Group className='my-3'>
                 <Card>
                   <Card.Content>
@@ -55,4 +54,4 @@ function Repositories(props) {
   );
 }
 
-export default Repositories;
+export default memo(Repositories);
