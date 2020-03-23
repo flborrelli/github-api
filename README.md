@@ -3,7 +3,7 @@ This is a responsive **GitHub API Fetch** application developed with React aimin
 
 #### API Documentation: https://developer.github.com/v3/
 
-![](/github-api-test/public/images/app-screenshot.png)
+![](/public/images/app-screenshot.png)
 
 ## Usage
 
