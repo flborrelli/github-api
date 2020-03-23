@@ -6,7 +6,7 @@ import { Navbar } from 'react-bootstrap';
 function MyNavbar (){
 
   return(
-    <Navbar bg="light">
+    <Navbar className='navbar-container'>
     <Navbar.Brand href="#home">
       <img
         src="/images/octocat.png"

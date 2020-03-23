@@ -22,7 +22,7 @@ function App() {
   const [error, setError] = useState(null);
   const [hideButton, setHideButton] = useState(false);
 
-  const rootAPI_URL = "https://api.github.com/users/example";
+  const rootAPI_URL = "https://api.github.com/users/github";
   const userAPI_URL = `https://api.github.com/users/${userInput}`;
   const reposAPI_URL = `https://api.github.com/users/${username}/repos`;
 
