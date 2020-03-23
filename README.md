@@ -1,6 +1,8 @@
 # GitHub API Test
 This is a responsive **GitHub API Fetch** application developed with React aiming at search GitHub users, their repos and its stars.
 
+#### Try it: https://master.dwfdb8agecir0.amplifyapp.com/
+
 #### API Documentation: https://developer.github.com/v3/
 
 ![](/public/images/app-screenshot.png)
@@ -31,11 +33,9 @@ $ npm start
 ## Technologies
 
 - JavaScript
-- React
-- Hooks
+- React Hooks
 - Semantic UI React
-- CSS
-- HTML
+- AWS Amplify Console
 
 ## About Me
 
